@@ -1,0 +1,81 @@
+package com.demo.beans;
+
+public class Customer 
+{
+	private int cid;
+	private String cname;
+	private String cmob;
+	
+	
+	public Customer() {
+		super();
+	}
+	
+
+
+	public Customer(int cid) {
+		super();
+		this.cid = cid;
+	}
+
+
+
+
+	public Customer(int cid, String cname, String cmob) {
+		super();
+		this.cid = cid;
+		this.cname = cname;
+		this.cmob = cmob;
+	}
+	
+	
+
+	@Override
+	public int hashCode() {
+		return this.cid;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) 
+	{
+		return this.cid == ((Customer)obj).cid;
+	}
+
+
+	public int getCid() {
+		return cid;
+	}
+
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+
+
+	public String getCname() {
+		return cname;
+	}
+
+
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+
+	public String getCmob() {
+		return cmob;
+	}
+
+
+	public void setCmob(String cmob) {
+		this.cmob = cmob;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Item [cid=" + cid + ", cname=" + cname + ", cmob=" + cmob + "]";
+	}
+	
+}
